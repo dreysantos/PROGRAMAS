@@ -1,44 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sites</title>
-<!-- esse link me permite usar o phosphoricons-->
-     <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css" />
-<!-- esse me permite usar o remixicon-->
+    <title>Prime Video</title>
+
+    <!-- Phosphor Icons -->
     <link
-    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
-    rel="stylesheet"/>
-    
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css" />
+
+    <!-- Remix Icon -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
 
-    <header>
-        <h2>Prime Video</h2>
-        <nav>
-            <a href="">Início</a>
-            <a href="">Filmes</a>
-            <a href="">Séries</a>
-            <a href="">Esportes</a>
-            <a href="">TV ao vivo</a>
-            <div> | </div>
-            <a href=""> <i class="ri-function-add-line"></i> Assinaturas</a>
-        </nav>
+    <div class="primeira parte">
+        <header>
+           
+            <!-- Logo -->
+            <img src="./logo-min-remaster.png" alt="Logo Prime Video">
 
-        <div>
+            <!-- Navegação -->
+            <nav>
+                <a href="#">Início</a>
+                <a href="#">Filmes</a>
+                <a href="#">Séries</a>
+                <a href="#">Esportes</a>
+                <a href="#">TV ao vivo</a>
+                <a href="#"><i class="ri-function-add-line"></i> Assinaturas</a>
+            </nav>
 
-           <button> <i class="ri-search-line"></i> </button>
-         <a href=""> <i class="ph ph-dots-nine"></i> </a>
-            <a href=""><i class="ph ph-bookmark-simple"></i></a>
-            <img src="" alt="">
-            <button> Assine o Prime</button>
-            <img src="./download.svg" alt="">
+            <!-- Parte Direita -->
+            <div id="segunda parte">
+                <button><i class="ri-search-line"></i></button>
+                <a href="#"><i class="ph ph-dots-nine"></i></a>
+                <a href="#" id="link">
+                    <i class="ph ph-bookmark-simple rodar"></i> Assinatura
+                </a>
+                <img src="./avatar.png" alt="Avatar do usuário">
+                <button>Assine o Prime</button>
+                <img src="./download.svg" alt="Ícone de download">
+            </div>
+        </header>
         </div>
-    </header>
+    
 
 </body>
 </html>
