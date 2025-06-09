@@ -1,0 +1,12 @@
+*{
+    margin: 1;
+    padding: 10;
+   
+}
+.titulo{
+    background-color: red;
+}
+.comida{
+    background-color: yellow;
+    color: green;
+}
