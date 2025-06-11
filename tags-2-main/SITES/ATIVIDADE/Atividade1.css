@@ -1,0 +1,42 @@
+header{
+    margin: 0;
+    box-shadow: none;
+    box-sizing: border-box;
+    padding: 0;
+}
+nav{
+    padding: 1px;
+    border-radius: 10px;
+    margin: 0px;
+}
+img{
+    box-shadow: 2px 2px 2px  red;
+}
+section p {
+    border: none;
+    background-color: chartreuse;
+}
+.section sobrevc{
+    box-shadow: none;
+}
+h1{
+    color: red;
+}
+h2{
+    text-rendering: geometricPrecision;
+    color:blue;
+}
+table th{
+   color:crimson;
+   
+}
+h3{
+    color: cyan;
+}
+h4{
+    color: chartreuse;
+}
+.div perso{
+    color: chocolate;
+    box-shadow: none;
+}
