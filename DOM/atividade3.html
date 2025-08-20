@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista</title>
+</head>
+<body>
+    <ul></ul>  
+    <div id="app"></div>
+    <script>
+        const Lista = document.createElement("ul");
+        for (let i = 1; i <= 5; i++) {
+            const item = document.createElement("li");
+            item.textContent = "item" + i;
+            Lista.appendChild(item);
+        }
+
+        document.getElementById("app").appendChild(Lista);
+        const botao = document.createElement("button");
+        botao.textContent= "excluir lista";
+        botao.addEventListener("click", () =>{
+            Lista.remove();
+            botao.remove();
+        });
+        document.getElementById("app").appendChild(botao);
+    </script>
+</body>
+</html>

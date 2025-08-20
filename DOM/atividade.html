@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom exercicio</title>
+</head>
+<body>
+    <style>
+        .tudoazul{
+            background-color: blue;
+            color: white;
+            padding: 100px;
+        }
+    </style>
+    <div id="meudiv" >Texto branco</div>
+    <button id="meubotao">Mudar para azul</button>
+    <script>
+        const  div = document.getElementById("meudiv");
+        const botao =document.getElementById("meubotao");
+        botao.addEventListener("click",()=>{
+            div.classList.add('tudoazul');
+            div.innerText = "o fundo agora é azul!";
+        });
+    </script>
+</body>
+</html>
