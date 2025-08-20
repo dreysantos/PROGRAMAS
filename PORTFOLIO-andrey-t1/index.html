@@ -1,83 +1,106 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="andrey gabriel da silva santos" />
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio Andrey Gabriel</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link
     href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
-    rel="stylesheet"/>
-    <title>Meu portfolio</title>
+    rel="stylesheet"
+/>
 </head>
-
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#informacao">Sobre</a></li>
-                <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#mensagem">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section id="inicio">
-        <h1>ANDREY GABRIEL</h1>
-        <p>Aprendiz de desenvolvimento web</p>
-    </section>
-    <section id="informacao">
-        <img src="./assets/image/WhatsApp Image 2025-07-25 at 08.33.13.jpeg" alt="">
-        <p>Meu nome é Andrey, tenho 16 anos e atualmente faço curso de desenvolvimento <br>web na Dax code e estudo no
-            Cetep-Rm no segundo ano do ensino medio e <br>faço curso de tecnico de mecatronica! </p>
-    </section>
-    <section id="projetos">
-        <h2>Projetos</h2>
-        <div id="conteinercard">
-            <div class="card">
-                <img src="./assets/image/AMAZON.png" alt="">
-                <p>Header Amazon</p>
-            </div>
-            <br>
-            <div class="card">
-                <img src="./assets/image/ca5d12864c12916c05640b36e47ac5c9.png" alt="">
-                <p>Header Shopee</p>
-            </div>
-        </div>
-    </section>
+  <!-- Cabeçalho -->
+  <header class="header">
+    <div class="overlay">
+      <h1>ANDREY GABRIEL</h1>
+      <p>Aprendiz de desenvolvimento web</p>
+    </div>
+  </header>
 
-    <section id="mensagem">
-        <form>
-            <label for="Nome">Nome:</label>
-            <br>
-            <input type="text">
-            <br>
-            <label for="E-mail">E-mail:</label>
-            <br>
-            <input type="text">
-            <br>
-            <label for="Mensagem">Mensagem</label>
-            <br>
-            <input type="text">
-            <br>
-            <br>
-            <input type="button" value="Enviar">
-             <div class="msg">
-            <b>Vamos criar algo juntos!</b>
-        </div>
-        </form>
-    </section>
-    <section id="redes">
-        <a href="https://github.com/dreysantos"><i class="ri-github-fill"></i></a>
-        <a href="https://www.instagram.com/drey_.santos7?igsh=MWJ2ZjZtYXE1bnJ0bA=="><i class="ri-instagram-line"></i></a>
-        <a href="https://www.tiktok.com/@andrey54g?_t=ZM-8y8307imYRK&_r=1"><i class="ri-tiktok-fill"></i></a>
-    </section>
-    <footer>
+  <!-- Apresentação -->
+  <section class="sobre">
+    <p>
+      Meu nome é Andrey, tenho 16 anos e atualmente faço curso de desenvolvimento 
+      web na Dax Code e estudo no Cetep-RN no segundo ano do ensino médio. 
+      Também faço curso técnico de mecatrônica!
+    </p>
+  </section>
 
-            <p>Desenvolvido por Andrey...</p>
+  <!-- Projetos -->
+  <section class="projetos">
+    <h2>Projetos</h2>
+    <div class="cards">
+      <div class="card" onclick="abrirLink('https://www.amazon.com.br')">
+        <img src=".//assets/image/AMAZON.png" alt="Amazon">
+        <p>Header Amazon</p>
+      </div>
+      <div class="card" onclick="abrirLink('https://shopee.com.br')">
+        <img src="./assets/image/ca5d12864c12916c05640b36e47ac5c9.png" alt="Shopee">
+        <p>Header Shopee</p>
+      </div>
+    </div>
+  </section>
+  <!-- Contato -->
+<section class="contato" id="contato">
+  <h2>Contato</h2>
+  <form id="form-contato">
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" required>
 
-    </footer>
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="mensagem">Mensagem:</label>
+    <textarea id="mensagem" name="mensagem" required></textarea>
+
+    <button type="submit">Enviar</button>
+  </form>
+  <p class="chamada">Vamos criar algo juntos!</p>
+</section>
+
+<!-- Rodapé -->
+<footer class="rodape">
+  <div class="redes">
+    <a href="#"><img src="./assets/image/5968776.png" alt="Instagram"></a>
+    <a href="#"><img src="./assets/image/unnamed (1).png" alt="GitHub"></a>
+    <a href="#"><img src="./assets/image/tiktok.png" alt="TikTok"></a>
+  </div>
+  <p>Desenvolvido por Andrey.</p>
+</footer>
+
+  <script src="script.js">
+    // Abre o link em nova aba
+function abrirLink(url) {
+  window.open(url, "_blank");
+}
+
+// Animação suave ao rolar a página
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute("href")).scrollIntoView({
+      behavior: "smooth"
+    });
+  });
+});
+
+// Efeito de entrada nos cards ao rolar a tela
+const cards = document.querySelectorAll(".card");
+
+function mostrarCards() {
+  const alturaTela = window.innerHeight;
+  cards.forEach(card => {
+    const distanciaTop = card.getBoundingClientRect().top;
+    if (distanciaTop < alturaTela - 50) {
+      card.classList.add("aparecer");
+    }
+  });
+}
+
+window.addEventListener("scroll", mostrarCards);
+mostrarCards(); // chama na carga inicial
+  </script>
 </body>
-
 </html>
